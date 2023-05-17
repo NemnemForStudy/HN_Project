@@ -38,5 +38,9 @@ public class CommentEntity {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
         this.commentContent = dto.getCommentContent();
+        this.writeDatetime = simpleDateFormat.format(now);
+        this.boardNumber = dto.getBoardNumber();
+        this.writerId = userEntity.getEmail();
+        this.writerNickname = userEntity.getNickname();
     }
 }

@@ -3,10 +3,12 @@ package com.example.team2.board.dto.request.board;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@ApiModel(value="댓글 작성 Request Body")
 @Data
 @NoArgsConstructor
 public class PostCommentRequestDto {
@@ -17,5 +19,5 @@ public class PostCommentRequestDto {
 
     @ApiModelProperty(value="댓글 내용", example="This is Comment!", required=true)
     @NotBlank
-    private String commentCount;
+    private String commentContent;
 }
